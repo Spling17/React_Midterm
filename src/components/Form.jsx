@@ -4,10 +4,10 @@ const Form = ({ setWord, getPhotoData }) => {
       <input
        type="text" 
        name="keyword" 
-       placeholder="e.g. cat"
+       placeholder="ex. cherry blossom"
        onChange={e => setWord(e.target.value)}
       />
-      <button type="submit" onClick={getPhotoData}>Search</button>
+      {/* <button type="submit" onClick={getPhotoData}>Search</button> */}
     </form>
   );
 }

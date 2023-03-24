@@ -8,9 +8,8 @@ import Pixabay from './components/Pixabay'
 import { API_KEY } from './config'
 
 function App() {
-  const [word, setWord] = useState('japan')
+  const [word, setWord] = useState('cherry blossom')
   const [unsplashPhoto, setUnsplashPhoto] = useState([])
-
   const [pixabayPhoto, setPicxabayPhoto] = useState([])
 
   const getPhotoData = (url) => {
@@ -29,8 +28,8 @@ function App() {
   }
 
   useEffect(() => {
-    const unsplash = `https://api.unsplash.com/search/photos?query=${word}&client_id=${API_KEY.UNSPLASH_API_KEY}`
-    const pixabay = `https://pixabay.com/api/?key=${API_KEY.PIXABAY_API_KEY}&q=${word}&image_type=photo`
+    const unsplash = `https://api.unsplash.com/search/photos?per_page=12&query=${word}&client_id=${API_KEY.UNSPLASH_API_KEY}`
+    const pixabay = `https://pixabay.com/api/?key=${API_KEY.PIXABAY_API_KEY}&per_page=12&q=${word}&image_type=photo`
     getPhotoData(unsplash)
     getPhotoData(pixabay)
   }, [word])
@@ -39,10 +38,9 @@ function App() {
     <div className="container">
       <Title />
       <Form setWord={setWord} getPhotoData={getPhotoData} />
-
-      <div className="container">
-        {unsplashPhoto && <Unsplash photos={unsplashPhoto} />}
-        {pixabayPhoto && <Pixabay photos={pixabayPhoto} />}
+      <div className="results">
+        {unsplashPhoto && <Unsplash word={word} photos={unsplashPhoto} />}
+        {pixabayPhoto && <Pixabay word={word} photos={pixabayPhoto} />}
       </div>
     </div>
   )

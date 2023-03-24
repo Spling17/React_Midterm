@@ -1,9 +1,10 @@
 import './results.css'
 // const searchTitle
-const Unsplash = ({ photos }) => {
+const Unsplash = ({ photos, word }) => {
   return (
     <>
-      <h3>Result</h3>
+    <h3><a href="https://unsplash.com/">Unsplash</a></h3>
+    <h4>Serch results: "{word}"</h4>
       <div className="photo-list unsplash">
         {photos.map((photo) => (
           <div className="image" key={photo.id}>
