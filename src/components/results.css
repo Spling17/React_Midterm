@@ -1,7 +1,7 @@
 .photo-list {
   display: grid;
-  grid-template-columns: 24% 24% 24% 24%;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: repeat(auto-fit, 300px);
+  /* grid-template-rows: auto auto auto; */
   grid-gap: 10px;
   justify-items: center;
   padding-left: 2%;
@@ -15,11 +15,8 @@
 /* } */ 
 
 img {
-  /* width: 30vw;
-  height: 20vh; */
   width: 300px;
   height: 300px;
-  /* border-radius: 5px; */
   -o-object-fit: cover;
      object-fit: cover;
   background-position: center;
@@ -42,3 +39,8 @@ img:hover {
   background: red;
 } */
 
+/* @media (min-width: 40em) {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+  }
+  } */
