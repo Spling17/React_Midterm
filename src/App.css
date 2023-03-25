@@ -4,12 +4,12 @@
 } */
 
 * {
-  margin: 0;
+  margin: 0 auto;
   text-decoration: none;
 }
 
 .container {
-  width: 100%;
+  width: 90%;
   padding: 0;
   display: flex;
   flex-direction: column;
