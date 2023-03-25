@@ -28,8 +28,8 @@ function App() {
   }
 
   useEffect(() => {
-    const unsplash = `https://api.unsplash.com/search/photos?per_page=15&query=${word}&client_id=${API_KEY.UNSPLASH_API_KEY}`
-    const pixabay = `https://pixabay.com/api/?key=${API_KEY.PIXABAY_API_KEY}&per_page=15&q=${word}&image_type=photo`
+    const unsplash = `https://api.unsplash.com/search/photos?per_page=12&query=${word}&client_id=${API_KEY.UNSPLASH_API_KEY}`
+    const pixabay = `https://pixabay.com/api/?key=${API_KEY.PIXABAY_API_KEY}&per_page=12&q=${word}&image_type=photo`
     getPhotoData(unsplash)
     getPhotoData(pixabay)
   }, [word])
