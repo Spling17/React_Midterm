@@ -1,5 +1,6 @@
 .photo-list {
   display: grid;
+  /* grid-template-columns: repeat(1fr 1fr 1fr 1fr); */
   grid-template-columns: repeat(auto-fit, 300px);
   /* grid-template-rows: auto auto auto; */
   grid-gap: 10px;
@@ -8,15 +9,9 @@
   padding-bottom: 30px;
 }
 
-/* .photo {
-  /* border: 1px solid black; */
-  /* width: 250px;
-  height: 250px; */
-/* } */ 
-
 img {
   width: 300px;
-  height: 300px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   background-position: center;
@@ -30,14 +25,6 @@ img:hover {
   transition-duration: 0.3s;
   transform: translateY(5px);
 }
-
-/* .pixabay {
-  background: blue;
-}
-
-.unsplash {
-  background: red;
-} */
 
 /* @media (min-width: 40em) {
   .grid {
